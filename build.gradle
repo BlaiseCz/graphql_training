@@ -15,19 +15,24 @@ configurations {
 }
 
 repositories {
+    jcenter()
     mavenCentral()
 }
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
+
+    implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:11.0.0'
+    runtimeOnly 'com.graphql-java-kickstart:altair-spring-boot-starter:11.0.0'
+    runtimeOnly 'com.graphql-java-kickstart:graphiql-spring-boot-starter:11.0.0'
+    runtimeOnly 'com.graphql-java-kickstart:voyager-spring-boot-starter:11.0.0'
+    testImplementation 'com.graphql-java-kickstart:graphql-spring-boot-starter-test:11.0.0'
 }
 
 test {
